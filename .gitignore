@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment variables file
+.env
+
+# Other files and directories to ignore
+.DS_Store
+*.swp

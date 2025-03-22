@@ -1,0 +1,25 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
+}
+
+model TemporaryData {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId 
+  rawData   String
+  brand     String?
+  serie     String?
+  section   String?
+  version   String?
+  year      String?  
+  mileage   String?  
+  price     String? 
+  location  String?
+  link      String
+  origin    String
+  date      DateTime
+}
